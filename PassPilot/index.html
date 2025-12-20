@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassPilot - Navigate Password Creation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                        secondary: '#fbbf24',
+                        accent: '#15803d'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-green-600 to-green-500 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-3xl">🔐</span>
+                    <h1 class="text-white text-2xl font-bold">PassPilot</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white font-semibold border-b-2 border-yellow-400 pb-1 hover:text-yellow-300 transition">Home</a>
+                    <a href="tools.html" class="text-white font-semibold hover:text-yellow-300 transition">Tools</a>
+                    <a href="about.html" class="text-white font-semibold hover:text-yellow-300 transition">About</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block text-white font-semibold py-2 border-l-4 border-yellow-400 pl-4 bg-green-700">Home</a>
+                <a href="tools.html" class="block text-white font-semibold py-2 hover:bg-green-700 pl-4 transition">Tools</a>
+                <a href="about.html" class="block text-white font-semibold py-2 hover:bg-green-700 pl-4 transition">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center">
+            <div class="mb-8">
+                <span class="text-8xl">🛡️</span>
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4">
+                Welcome to <span class="text-green-600">PassPilot</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Navigate easily through password creation with our powerful and intuitive password generator. 
+                Create strong, secure passwords in seconds.
+            </p>
+            <a href="tools.html" class="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-full hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition shadow-lg">
+                Generate Password Now 🚀
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose PassPilot?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 rounded-lg hover:shadow-xl transition transform hover:-translate-y-2 border-2 border-green-200">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Lightning Fast</h4>
+                    <p class="text-gray-600">Generate secure passwords instantly with just one click. No waiting, no hassle.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center p-6 rounded-lg hover:shadow-xl transition transform hover:-translate-y-2 border-2 border-yellow-200">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Highly Secure</h4>
+                    <p class="text-gray-600">Create passwords with uppercase, lowercase, numbers, and special characters.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center p-6 rounded-lg hover:shadow-xl transition transform hover:-translate-y-2 border-2 border-green-200">
+                    <div class="text-5xl mb-4">📱</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Fully Responsive</h4>
+                    <p class="text-gray-600">Works seamlessly on desktop, tablet, and mobile devices.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="text-center p-6 rounded-lg hover:shadow-xl transition transform hover:-translate-y-2 border-2 border-yellow-200">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Customizable</h4>
+                    <p class="text-gray-600">Choose password length and character types to fit your needs.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="text-center p-6 rounded-lg hover:shadow-xl transition transform hover:-translate-y-2 border-2 border-green-200">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Easy to Use</h4>
+                    <p class="text-gray-600">Simple and intuitive interface for quick password generation.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="text-center p-6 rounded-lg hover:shadow-xl transition transform hover:-translate-y-2 border-2 border-yellow-200">
+                    <div class="text-5xl mb-4">🌙</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Dark Mode</h4>
+                    <p class="text-gray-600">Toggle between light and dark themes for comfortable viewing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-gradient-to-r from-green-500 to-green-600 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold text-white mb-4">Ready to Create Secure Passwords?</h3>
+            <p class="text-xl text-white mb-8">Start generating strong passwords today!</p>
+            <a href="tools.html" class="inline-block bg-yellow-400 text-gray-800 font-bold py-4 px-8 rounded-full hover:bg-yellow-500 transform hover:scale-105 transition shadow-lg">
+                Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2025 PassPilot. All rights reserved.</p>
+            </div>
+            <div class="text-center mt-4">
+                <button id="darkModeToggle" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full transition">
+                    🌙 Toggle Dark Mode
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
